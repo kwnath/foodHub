@@ -1,34 +1,44 @@
 <template>
-  <div class="counter-wrapper">
-    <div class="counter">
-      {{ count }}
-    </div>
-    <button @click="$store.commit('INCREMENT')">Increment</button>
-    <button @click="$store.commit('DECREMENT')">Decrement</button>
-    <button @click="$store.dispatch('incrementAsync')">Increment Async</button>
+  <div> 
+    <el-upload
+  class="upload-demo"
+  action="https://jsonplaceholder.typicode.com/posts/"
+  :on-preview="handlePreview"
+  :on-remove="handleRemove"
+  :before-remove="beforeRemove"
+  multiple
+  :limit="3"
+  :on-exceed="handleExceed"
+  :file-list="fileList">
+  <el-button size="small" type="primary">Click to upload</el-button>
+  <div slot="tip" class="el-upload__tip">jpg/png files with a size less than 500kb</div>
+</el-upload>s
   </div>
 </template>
 
 <script>
-export default {
-  computed: {
-    count() {
-      return this.$store.state.count
+  export default {
+    data() {
+      return {
+        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+      };
+    },
+    methods: {
+      handleRemove(file, fileList) {
+        console.log(file, fileList);
+      },
+      handlePreview(file) {
+        console.log(file);
+      },
+      handleExceed(files, fileList) {
+        this.$message.warning(`The limit is 3, you selected ${files.length} files this time, add up to ${files.length + fileList.length} totally`);
+      },
+      beforeRemove(file, fileList) {
+        return this.$confirm(`确定移除 ${ file.name }？`);
+      }
     }
   }
-}
 </script>
 
 <style>
-.counter {
-  margin: 100px auto;
-  border-radius: 3px;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  line-height: 200px;
-  font-size: 5rem;
-  background-color: #f0f0f0;
-  user-select: none;
-}
 </style>
