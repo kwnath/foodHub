@@ -1,0 +1,14 @@
+{
+  "name": "template-vuepack",
+  "scripts": {
+    "test": "echo lol"
+  },
+  "dependencies": {},
+  "version": "3.3.1",
+  "repository": {
+    "url": "git@github.com:egoist/vuepack.git",
+    "type": "git"
+  },
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT"
+}
