@@ -6,7 +6,7 @@
         Calendar page
       </div>
       <div v-if="selectedTab()==1">
-        My list page
+        <list></list>
       </div>
       <div v-if="selectedTab()==2">
         Photo page
@@ -24,6 +24,7 @@
 
 <script>
 import TabBar from 'components/TabBar'
+import List from 'components/List'
 
 export default {
   data() {
@@ -31,7 +32,8 @@ export default {
     }
   },
   components: {
-    tabbar: TabBar
+    tabbar: TabBar,
+    list: List
   },
   computed: {
   },
