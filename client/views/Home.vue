@@ -6,10 +6,9 @@
         <calendar/>
       </div>
       <div v-if="selectedTab()==1">
-        My list page
-        <list />
+        <listpage></listpage>
       </div>
-      <div v-if="selectedTab()==2">        
+      <div v-if="selectedTab()==2">
       </div>
       <div v-if="selectedTab()==3">
         Market Place page
@@ -25,6 +24,7 @@
 
 <script>
 import TabBar from 'components/TabBar'
+import listpage from 'components/ListPage'
 import calendar from 'components/Calendar'
 import list from 'components/List'
 import Product from 'components/Product'
@@ -36,9 +36,11 @@ export default {
   },
   components: {
     tabbar: TabBar,
+    list: list,
     calendar: calendar,
     list: list,
-    Product: Product
+    Product: Product,
+    listpage: listpage
   },
   computed: {
   },
