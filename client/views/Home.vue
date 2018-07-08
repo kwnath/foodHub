@@ -22,6 +22,7 @@
         <Product/>
       </div>
       <div v-if="selectedTab()==4">
+        <recipepage/>
       </div>
     </div>
     </div>
@@ -36,6 +37,7 @@ import listpage from 'components/ListPage'
 import calendar from 'components/Calendar'
 import list from 'components/List'
 import Product from 'components/Product'
+import RecipePage from 'components/recipePage'
 
 export default {
   data() {
@@ -52,7 +54,8 @@ export default {
     calendar: calendar,
     list: list,
     Product: Product,
-    listpage: listpage
+    listpage: listpage,
+    recipepage: RecipePage
   },
   computed: {
   },
