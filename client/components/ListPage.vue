@@ -172,20 +172,11 @@
       loading() {
           return this.$store.state.loading
       }
-    },
-    mounted() {
-      setTimeout(() => {
-          this.$store.state.loading = false
-      }, 5000);
     }
   }
 </script>
 
-<<<<<<< HEAD
 <style scoped>
-
-=======
-<style>
 
   .loading {
     position: absolute;
@@ -197,7 +188,6 @@
     align-items: center;
     z-index: 100000;
   }
->>>>>>> 863376d130bc85ae0178a2b529c1a1f4ae2a7cfa
   .scroller {
     height: 100%;
   }
@@ -222,7 +212,6 @@
     background-color: #d3dce6;
   }
 
-<<<<<<< HEAD
   .el-tabs__item {
     font-size: 25px;
   }
@@ -248,9 +237,6 @@
     height: 300px;
   }
   .demo {
-    padding-bottom: 10vh
+    /* padding-sbottom: 10vh */
   }
 </style>
-=======
-  </style>
->>>>>>> 863376d130bc85ae0178a2b529c1a1f4ae2a7cfa

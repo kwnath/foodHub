@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const state = {
   selectedTab: 0,
-  loading: false
+  loading: true
 }
 
 const mutations = {

@@ -58,16 +58,18 @@ export default {
   },
   methods: {
     clickReceipt(){
-         this.view = true
          this.started=true
          this.$refs.testingImage.click()
          return
     },
     processFile(event) {
       console.log("hello")
+      this.view = true
       this.$store.state.selectedTab = 1
       this.$store.state.loading = true
-      let that = this
+            setTimeout(() => {
+          this.$store.state.loading = false
+      }, 5000);
     },
     getStarted() {
       this.started = true
