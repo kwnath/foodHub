@@ -6,7 +6,7 @@
         <calendar/>
       </div>
       <div v-if="selectedTab()==1">
-        <list></list>
+        <listpage></listpage>
       </div>
       <div v-if="selectedTab()==2">
       </div>
@@ -23,12 +23,9 @@
 
 <script>
 import TabBar from 'components/TabBar'
-<<<<<<< HEAD
-import List from 'components/List'
-=======
+import listpage from 'components/ListPage'
 import calendar from 'components/Calendar'
 import list from 'components/List'
->>>>>>> 7444852bed5bb793dbd2537e5dae90586db32702
 
 export default {
   data() {
@@ -37,12 +34,9 @@ export default {
   },
   components: {
     tabbar: TabBar,
-<<<<<<< HEAD
-    list: List
-=======
+    list: list,
     calendar: calendar,
-    list: list
->>>>>>> 7444852bed5bb793dbd2537e5dae90586db32702
+    listpage: listpage
   },
   computed: {
   },
