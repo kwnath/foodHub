@@ -2,7 +2,6 @@
   <div class="page">
     <div class="view-wrapper">
       <div v-if="selectedTab()==0">
-        Calendar page
         <calendar/>
       </div>
       <div v-if="selectedTab()==1">
@@ -11,11 +10,10 @@
       <div v-if="selectedTab()==2">
       </div>
       <div v-if="selectedTab()==3">
-        Market Place page
         <Product/>
       </div>
       <div v-if="selectedTab()==4">
-        Recipes page
+        <div>Market Place</div>
       </div>
     </div>
     <tabbar class="tabbar"></tabbar>
