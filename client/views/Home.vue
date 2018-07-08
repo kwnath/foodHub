@@ -1,8 +1,16 @@
 <template>
-  <div class="page">
-    <div class="view-wrapper">
+<div>
+    <div v-if="!started">
+      <img @click="getStarted" :src="homepage" class="home" alt="">
+    </div>
+    <div v-if="!view">
+      <img :src="receipt" class="home" alt="" @click="clickReceipt()">
+      <input accept="image/*" capture="camera" ref="testingImage" type="file" id="image" style="display:none" @change="processFile($event)"/>
+    </div>
+    <div class="page">
+    <div v-if="view">
+      <div class="view-wrapper">
       <div v-if="selectedTab()==0">
-        Calendar page
         <calendar/>
       </div>
       <div v-if="selectedTab()==1">
@@ -11,15 +19,15 @@
       <div v-if="selectedTab()==2">
       </div>
       <div v-if="selectedTab()==3">
-        Market Place page
         <Product/>
       </div>
       <div v-if="selectedTab()==4">
-        Recipes page
       </div>
+    </div>
     </div>
     <tabbar class="tabbar"></tabbar>
   </div>
+</div>
 </template>
 
 <script>
@@ -32,6 +40,10 @@ import Product from 'components/Product'
 export default {
   data() {
     return {
+      started: false,
+      view: false,
+      homepage: require("../assets/home.png"),
+      receipt: require("../assets/receipt.png")
     }
   },
   components: {
@@ -45,6 +57,24 @@ export default {
   computed: {
   },
   methods: {
+    clickReceipt(){
+         this.view = true
+         this.started=true
+         this.$refs.testingImage.click()
+         return
+    },
+    processFile(event) {
+      console.log("hello")
+      this.$store.state.selectedTab = 1
+      this.$store.state.loading = true
+      let that = this
+    },
+    getStarted() {
+      this.started = true
+    },
+    showView() {
+      return this.view = true
+    },
     selectedTab() {
       let test = this.$store.state.selectedTab
       return test
@@ -57,7 +87,13 @@ export default {
 }
 </script>
 <style>
-
+.home {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  position: relative;
+  background-color: white;
+}
 .page {
   height: 100vh;
   width: 100vw;

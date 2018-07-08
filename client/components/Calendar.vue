@@ -134,7 +134,7 @@
               from: new Date(2018, 6, 26),                // Highlight all dates after specific date
               days: [6, 0]                                // Highlight Saturday's and Sunday'
         },
-        active: true
+        active: false
       }
     },
     methods: {
