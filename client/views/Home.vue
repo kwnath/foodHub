@@ -13,6 +13,7 @@
       </div>
       <div v-if="selectedTab()==3">
         Market Place page
+        <Product/>
       </div>
       <div v-if="selectedTab()==4">
         Recipes page
@@ -26,6 +27,7 @@
 import TabBar from 'components/TabBar'
 import calendar from 'components/Calendar'
 import list from 'components/List'
+import Product from 'components/Product'
 
 export default {
   data() {
@@ -35,7 +37,8 @@ export default {
   components: {
     tabbar: TabBar,
     calendar: calendar,
-    list: list
+    list: list,
+    Product: Product
   },
   computed: {
   },
