@@ -1,4 +1,5 @@
 <template>
+
 <div>
     <div class="loading" v-if="loading()">
 <svg class="lds-pinkpig" width="50%"  height="50%"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="background: none;">
