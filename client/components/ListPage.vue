@@ -78,16 +78,22 @@
   "https://image.flaticon.com/icons/svg/449/449374.svg",
   "https://image.flaticon.com/icons/svg/971/971677.svg",
   "https://image.flaticon.com/icons/svg/878/878098.svg",
+  "http://www.freshoriental.co.uk/images/products/related/vita-soya-milk-original-1l-%E7%B6%AD%E4%BB%96-%E8%B1%86%E5%A5%B6-p10654-3157_related.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/0/09/Spam_can.png",
   "https://image.flaticon.com/icons/svg/385/385108.svg",
-  "https://image.flaticon.com/icons/svg/923/923189.svg",
   "https://image.flaticon.com/icons/svg/362/362281.svg",
   "https://image.flaticon.com/icons/svg/305/305385.svg",
-  "https://cdn.yamibuy.net/item/5183762b1f0b6b7678c3a1ff0c6728dd_500x500.webp"]
+  "https://cdn.yamibuy.net/item/5183762b1f0b6b7678c3a1ff0c6728dd_500x500.webp",
+  "https://image.flaticon.com/icons/svg/135/135658.svg"
+  ]
   const freezer = [
-    { url: urls[0], name: 'Frozen Chicken Fillet', from: '8/7/2018', to: '10/7/2018',  },
+    { url: require("../assets/banana.png"), name: 'Banana (5pcs)', from: '8/7/2018', to: '9/7/2018'},
+    { url: urls[0], name: 'Frozen Chicken Fillet', from: '8/7/2018', to: '10/7/2018'},
+    { url: require("../assets/yogurt.png"), name: 'Kowloon Diary Yogurt 100g', from: '13/7/2018', to: '15/7/2018'},
+    { url: require("../assets/watermelon.jpg"), name: 'Watermelon', from: '19/7/2018', to: '21/7/2018'},
     { url: urls[1], name: 'Nestle Chocolate ice cream', from: '19/7/2018', to: '23/7/2018' },
     { url: urls[2], name: 'Red Bean Ice Lolly', from: '26/7/2018', to: '30/7/2018'},
+    { url: urls[13], name: 'Oriental style noodle 100g', from: '24/8/2018', to: '30/8/2018'}
   ]
   const beverage = [
     { url: urls[3], name: 'Low Fat Milk', from: '8/7/2018', to: '10/7/2018'},
@@ -98,12 +104,13 @@
   ]
   const canned = [
     { url: urls[8], name: 'Pork Luncheon Meat 200g', from: '8/12/2018', to: '10/12/2018'},
-    { url: urls[9], name: 'Tuna Fish', from: '24/12/2018', to: '12/1/2019' },
+    { url: urls[9], name: 'Tuna Fish', from: '24/12/2018', to: '12/1/2019'}
   ]
   const snacks = [
     { url: urls[10], name: 'Salted Peanuts 100g', from: '8/9/2018', to: '15/9/2018'},
-    { url: urls[11], name: 'Calbee Potato Chips (Pizza)', from: '15/9/2018', to: '20/9/2018' },
+    { url: urls[11], name: 'Calbee Potato Chips (Pizza)', from: '15/9/2018', to: '20/9/2018'},
     { url: urls[12], name: 'EDO Choco Pie (10pcs)', from: '8/10/2018', to: '20/10/2018'},
+    { url: require("../assets/cookies.jpg"), name: 'Famous Amos Cookies (10pcs)', from: '10/12/2018', to: '14/12/2018'}
   ]
   const items = [freezer,beverage,canned,snacks]
   const containers = ["freezer","beverage","canned and dried food","snacks"]
