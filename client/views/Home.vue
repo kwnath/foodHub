@@ -1,15 +1,15 @@
 <template>
   <div class="page">
     <div class="view-wrapper">
-      {{selectedTab()}}
       <div v-if="selectedTab()==0">
         Calendar page
+        <calendar/>
       </div>
       <div v-if="selectedTab()==1">
         My list page
+        <list />
       </div>
-      <div v-if="selectedTab()==2">
-        Photo page
+      <div v-if="selectedTab()==2">        
       </div>
       <div v-if="selectedTab()==3">
         Market Place page
@@ -24,6 +24,8 @@
 
 <script>
 import TabBar from 'components/TabBar'
+import calendar from 'components/Calendar'
+import list from 'components/List'
 
 export default {
   data() {
@@ -31,7 +33,9 @@ export default {
     }
   },
   components: {
-    tabbar: TabBar
+    tabbar: TabBar,
+    calendar: calendar,
+    list: list
   },
   computed: {
   },
@@ -48,17 +52,25 @@ export default {
 }
 </script>
 <style>
+
+.page {
+  height: 100vh;
+  width: 100vw;
+
+}
 body {
   font-family: 'Avenir';
 }
 .view-wrapper {
   width: 100vw;
-  height: 90vh;
+  height: 100%;
   background-color: lightgrey;
 }
 
 .tabbar {
-  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  /* height: 10vh; */
   background-color: white;
 }
 </style>

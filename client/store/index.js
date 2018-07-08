@@ -4,7 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  selectedTab: 0
+  selectedTab: 0,
+  loading: false
 }
 
 const mutations = {
