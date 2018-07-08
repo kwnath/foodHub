@@ -2,65 +2,65 @@
   <div class="demo">
     <el-tabs type="border-card">
       <el-tab-pane>
-        <span slot="label"><i class="el-icon-date"></i> Freezere</span>
-        <div class="item" v-for="item in freezer" style="display: flex; flex-direction: row; justify-content: space-between">
+        <span slot="label" style="font-size: 25px;"><i class="el-icon-date"></i> Freezere</span>
+        <div class="item" v-for="item in freezer" style="display: flex; flex-direction: row; justify-content: flex-start;     ">
           <div class="p-image">
             <img :src="item.url" width=250px>
           </div>
-          <div class="p-desc" style="    display: flex; flex-direction: column; justify-content: space-around">
+          <div class="p-desc" style="    text-align: left;    display: flex; flex-direction: column; justify-content: space-around; width: 450px">
             <div class="p-name">
               {{item.name}}
             </div>
             <div class="p-date">
-               use by: {{item.from}} - {{item.to}}
+               Expiry Date: <span style="color: red; font-weight: bold">{{item.to}}</span>
             </div>
           </div>
         </div>
       </el-tab-pane>
       <el-tab-pane>
-        <span slot="label"><i class="el-icon-date"></i> Beverage</span>
-        <div class="item" v-for="item in beverage" style="display: flex; flex-direction: row; justify-content: space-between">
+        <span slot="label" style="font-size: 25px;"><i class="el-icon-date"></i> Beverage</span>
+        <div class="item" v-for="item in beverage" style="display: flex; flex-direction: row; justify-content: flex-start;     ">
           <div class="p-image">
             <img :src="item.url" width=250px>
           </div>
-          <div class="p-desc" style="    display: flex; flex-direction: column; justify-content: space-around">
+          <div class="p-desc" style="    text-align: left;    display: flex; flex-direction: column; justify-content: space-around; width: 450px">
             <div class="p-name">
               {{item.name}}
             </div>
             <div class="p-date">
-               use by: {{item.from}} - {{item.to}}
+               Expiry Date: <span style="color: red; font-weight: bold">{{item.to}}</span>
             </div>
           </div>
         </div>
       </el-tab-pane>
       <el-tab-pane>
-        <span slot="label"><i class="el-icon-date"></i> Canned and Dried Food</span>
-        <div class="item" v-for="item in canned" style="display: flex; flex-direction: row; justify-content: space-between">
+        <span slot="label" style="font-size: 25px;"><i class="el-icon-date"></i> Canned and Dried Food</span>
+        <div class="item" v-for="item in canned" style="display: flex; flex-direction: row; justify-content: flex-start;     ">
           <div class="p-image">
             <img :src="item.url" width=250px>
           </div>
-          <div class="p-desc" style="    display: flex; flex-direction: column; justify-content: space-around">
+          <div class="p-desc" style="    text-align: left;    display: flex; flex-direction: column; justify-content: space-around; width: 450px">
             <div class="p-name">
               {{item.name}}
             </div>
             <div class="p-date">
-               use by: {{item.from}} - {{item.to}}
+               Expiry Date: <span style="color: red; font-weight: bold">{{item.to}}</span>
             </div>
           </div>
         </div>
       </el-tab-pane>
       <el-tab-pane>
-        <span slot="label"><i class="el-icon-date"></i> Snacks</span>
-        <div class="item" v-for="item in snacks" style="display: flex; flex-direction: row; justify-content: space-between">
+        <span slot="label" style="font-size: 25px;"><i class="el-icon-date"></i> Snacks</span>
+        <div class="item" v-for="item in snacks" style="display: flex; flex-direction: row; justify-content: flex-start;     ">
           <div class="p-image">
             <img :src="item.url" width=250px>
           </div>
-          <div class="p-desc" style="    display: flex; flex-direction: column; justify-content: space-around">
+          <div class="p-desc" style="    text-align: left;    display: flex; flex-direction: column; justify-content: space-around; width: 450px">
             <div class="p-name">
               {{item.name}}
             </div>
             <div class="p-date">
-               use by: {{item.from}} - {{item.to}}
+               Expiry Date: <span style="color: red; font-weight: bold">{{item.to}}</span>
             </div>
           </div>
         </div>
@@ -124,7 +124,8 @@
   }
 </script>
 
-<style>
+<style scoped>
+
   .scroller {
     height: 100%;
   }
@@ -148,3 +149,32 @@
   .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
   }
+
+  .el-tabs__item {
+    font-size: 25px;
+  }
+
+  .p-image {
+    flex: 1;
+    /*border: 1px solid #000;*/
+  }
+
+  .p-desc {
+    margin-left: 10px;
+  }
+
+  .p-name {
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .item {
+    border-bottom: 1px solid #909399;
+    padding: 20px;
+    margin: 5px;
+    height: 300px;
+  }
+  .demo {
+    padding-bottom: 10vh
+  }
+</style>
